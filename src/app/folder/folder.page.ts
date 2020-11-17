@@ -8,11 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FolderPage implements OnInit {
   public folder: string;
-
-  constructor(private activatedRoute: ActivatedRoute) { }
+  public url: string="https://systemnoteapp.blogspot.com/p/stories-collection.html";
+  constructor(private activatedRoute: ActivatedRoute) { this.url=localStorage.getItem("url");}
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+    
   }
 
 }

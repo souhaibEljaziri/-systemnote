@@ -13,37 +13,63 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'A propos',
+      url: '/folder/A propos',
+      iframeUrl:'https://systemnoteapp.blogspot.com/p/about-us.html'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
-      icon: 'paper-plane'
+      title: 'System Note Book',
+      url: '/folder/System Note Book',
+      iframeUrl:'https://systemnoteapp.blogspot.com/p/system-book.html'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
+      title: 'Presentation Book',
+      url: '/folder/Presentation Book',
+      iframeUrl:'https://systemnoteapp.blogspot.com/p/presentation-book.html'
     },
     {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
+      title: 'Training',
+      url: '/folder/Training',
+      iframeUrl:'https://systemnoteapp.blogspot.com/p/trainings.html'
     },
     {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
+      title: 'Stories Collection',
+      url: '/folder/Stories Collection',
+      iframeUrl:'https://systemnoteapp.blogspot.com/p/stories-collection.html'
+
     },
     {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
+      title: 'Books Collection',
+      url: '/folder/Books Collection',
+      iframeUrl:'https://systemnoteapp.blogspot.com/p/books-collections.html'
+     
+    },
+    {
+      title: 'Films Collection',
+      url: '/folder/Films Collection',
+      iframeUrl:'https://systemnoteapp.blogspot.com/p/films-collection.html'
+     
+    },
+    {
+      title: 'Motivation Videos',
+      url: '/folder/Motivation Videos',
+      iframeUrl:'https://systemnoteapp.blogspot.com/p/motivation-videos.html'
+     
+    },
+    {
+      title: 'Networker Legende',
+      url: '/folder/Networker Legende',
+      iframeUrl:'https://systemnoteapp.blogspot.com/p/networkers-legende.html'
+     
+    },
+    {
+      title: 'Presonnel devlopement',
+      url: '/folder/Presonnel devlopement',
+      iframeUrl:'https://systemnoteapp.blogspot.com/p/personnel-devlopement.html'
+     
     }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = [];
 
   constructor(
     private platform: Platform,
@@ -59,9 +85,18 @@ export class AppComponent implements OnInit {
       this.splashScreen.hide();
     });
   }
-
+path:string;
+selectedRout(data){
+  localStorage.setItem("url",data.iframeUrl)
+}
   ngOnInit() {
+    
     const path = window.location.pathname.split('folder/')[1];
+    this.path = window.location.pathname.split('folder/')[1];
+    if(!this.path)
+    {
+      this.path =window.location.pathname.split('/h')[1];
+    }
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }

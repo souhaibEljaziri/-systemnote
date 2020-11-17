@@ -1,0 +1,67 @@
+ion-item{
+    --background: black;
+    --color: #fff;
+}
+
+ion-button{
+    // --background: black;
+    --width: 100vw;
+    --background: url(../../assets/icon/theme.jpg)!important;
+}
+.fondologin{
+    width: 100vw;
+    height: 100vh;
+    background-color: black!important;
+}
+
+  ::-webkit-input-placeholder {
+    text-align: center;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+ }
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+ }
+ ::ng-deep input {
+    border: 1px dashed #fff!important;
+    background: black!important;
+    text-align:center!important;
+
+  }
+  ::ng-deep input::placeholder{
+    text-align:center!important;
+  }
+.retate{
+    display: inline-flex;
+    transform: rotate(-90deg);
+    color: #fff;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.normalText{
+    color: #fff;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+::ng-deep .button-native{
+    background: url(../../assets/icon/theme.jpg)!important;
+}
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('../../assets/Fonts/DEATHNOTEFont.ttf') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+     url('../../assets/Fonts/DEATHNOTEFont.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+  @font-face {
+      font-family: "DejaVuSerifBold";
+      src: url('../../assets/Fonts/DejaVuSerif-Bold.ttf') format('woff'), 
+      url('../../assets/Fonts/DejaVuSerif-Bold.ttf') format('truetype');
+   
+  }
