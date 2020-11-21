@@ -1,15 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar [color]="'dark'">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- <ion-title>{{ folder }}</ion-title> -->
+    <!-- <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+  </ion-buttons> -->
+    <ion-buttons (click)="goToConf()" slot="end">
 
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path
+          d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
+      </svg>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-  <div> <img style="  background-color: black;width: 100vw!important;  display: block;
+<div style="background-color: black;"> <img style=" zoom: 71%; background-color: black;width: 100vw!important;  display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;" src="../../assets/icon/note.png"></div>
-    <div
-    style="top:0;width: 100vw;height: 100vh; background: url(../../assets/icon/theme.jpg) no-repeat 100% 100%!important;">
-    <div style="overflow: auto;height: 65%;">
-      <div *ngFor="let item of navBar">
-  <h3 class="text" > {{item.name}}</h3>
-  <hr>
+    margin-top: -7%;
+    width: 80%;" src="../../assets/icon/logo_death_note.png"></div>
+<div
+  style="top:0;width: 100vw;height: 100vh; background: url(../../assets/icon/note.png) no-repeat 100% 100%!important;">
+  <div style="overflow: auto;height: 69.5%;">
+    <div (click)="clickItem(item)" [routerLink]="[item.url]" *ngFor="let item of navBar">
+      <h3 class="text"> {{item.name}}</h3>
+
+      <hr>
+    </div>
+  </div>
 </div>
-</div>
+<div style="position: fixed; top:90%;">
+  <img style=" background-color: black;width: 100vw!important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; " src="../../assets/icon/footer.png">
+  <div style="position: absolute;
+  top: 14px;
+  left: 161px;
+  font-size: 20px;
+  font-family: OLDENGL;
+  color: #fff;
+  right: 16px;">
+    {{jsonData?.name}}
+  </div>
+  <div style="position: absolute;
+  top: 39px;
+  left: 166px;
+  font-size: 10px;
+  color: #fff;width: 44px;
+  right: 16px;">
+      {{jsonData?.grade}}
+  </div>
+  <div style="position: absolute;
+  top: 49px;
+  left: 178px;
+  font-size: 10px;
+  color: #fff;width: 35px;
+  right: 16px;">
+        {{jsonData?.resultat}}
+  </div>
+  <div style="position: absolute;
+  top: 38.5px;
+  left: 285px;
+  font-size: 10px;
+  color: #fff;
+  right: 16px;">
+     {{jsonData?.duplication}}
+  </div>
+  <div style="position: absolute;
+  top: 50px;
+  left: 321px;
+  font-size: 10px;
+  color: #fff;
+  right: 16px;">
+  {{jsonData?.NbrParterners}}
+  </div>
 </div>

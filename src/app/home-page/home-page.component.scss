@@ -94,3 +94,20 @@ hr {
 ::-webkit-scrollbar-thumb:hover {
   background: url(../../assets/icon/scrollB.PNG)!important;
 }
+::ng-deep .toolbar-background{
+	background-color:red;
+}
+::ng-deep ion-menu-button {
+  color: #fff!important; 
+ }
+ @font-face{
+  font-family: "OLDENGL";
+  src: url('../../assets/Fonts/OLDENGL.ttf')format('woff'),
+  url('../../assets/Fonts/OLDENGL.ttf') format('truetype');
+}
+svg {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
+  vertical-align: bottom;
+}

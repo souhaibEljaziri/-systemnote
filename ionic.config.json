@@ -1,5 +1,7 @@
 {
   "name": "systemnote",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

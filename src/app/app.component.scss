@@ -1,5 +1,5 @@
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: var(--ion-item-background, var(--ion-background-color, #000));
 }
 
 ion-menu.md ion-content {
@@ -23,7 +23,7 @@ ion-menu.md ion-note {
 }
 
 ion-menu.md ion-list#inbox-list {
-  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
+  border-bottom: 1px solid var(--ion-color-step-150, #000);
 }
 
 ion-menu.md ion-list#inbox-list ion-list-header {
@@ -47,15 +47,14 @@ ion-menu.md ion-item {
   --padding-start: 10px;
   --padding-end: 10px;
   border-radius: 4px;
+    border: 1px solid;
+    width: 102%;
+    height: 55px;
+    left: -1%;
+
 }
 
-ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.14);
-}
 
-ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
-}
 
 ion-menu.md ion-item ion-icon {
   color: #616e7e;
@@ -85,7 +84,7 @@ ion-menu.ios ion-item {
 }
 
 ion-menu.ios ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: red;
 }
 
 ion-menu.ios ion-item ion-icon {
@@ -115,5 +114,23 @@ ion-note {
 }
 
 ion-item.selected {
-  --color: var(--ion-color-primary);
+  --color: red;
+}
+ion-toolbar{
+  --background : #000;   
+}
+:host{ion-item {
+  background: black;}
+}
+ion-menu {
+  --ion-background-color: #000;
+  --ion-text-color: #fff;
+
+  ion-toolbar {
+    --background: #000;
+  }
+
+  ion-list {/* optional, but it needs when you use gradient as a background color.*/
+    background: transparent;
+  }
 }

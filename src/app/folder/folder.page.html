@@ -1,9 +1,13 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar [color]="'dark'">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>{{ folder }}</ion-title>
+    <ion-buttons slot="end">
+      <button (click)="goBack()" style="color: white;background-color: black;font-size: 20px;">></button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
@@ -15,9 +19,12 @@
       <ion-title size="large">{{ folder }}</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-view view-title="title">
-    <ion-content overflow-scroll="true">
-  <iframe *ngIf="url" src="{{url}}" style="width: 100vw;height: 100vh;" ></iframe>
-</ion-content>
-</ion-view>
+
+  <ion-content overflow-scroll="true">
+    <iframe *ngIf="url" [src]="url" style="margin-top: -15%;
+  width: 100vw;
+  height: 100vh;
+  height: 110vh;"></iframe>
+  </ion-content>
+
 </ion-content>

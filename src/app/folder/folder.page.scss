@@ -1,6 +1,6 @@
-ion-menu-button {
-  color: var(--ion-color-primary);
-}
+// ion-menu-button {
+//   color: black;
+// }
 
 #container {
   text-align: center;
@@ -10,7 +10,9 @@ ion-menu-button {
   top: 50%;
   transform: translateY(-50%);
 }
-
+::ng-deep ion-menu-button {
+ color: #fff!important; 
+}
 #container strong {
   font-size: 20px;
   line-height: 26px;
