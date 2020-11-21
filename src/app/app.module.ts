@@ -11,8 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { LoadingPageComponent } from './loading-page/loading-page.component';
+import { ConfComponent } from './conf/conf.component';
 @NgModule({
-  declarations: [AppComponent,HomePageComponent,LoginPageComponent,LoadingPageComponent],
+  declarations: [AppComponent,HomePageComponent,LoginPageComponent,LoadingPageComponent,ConfComponent],
   entryComponents: [],
   imports: [
     BrowserModule,

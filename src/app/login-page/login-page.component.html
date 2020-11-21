@@ -1,26 +1,40 @@
 <ion-content class="fondologin" padding>
-  <form  >
-    <ion-grid>
-      <ion-row class="fondologin" justify-content-center>
-        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-          <div > <img style="    display: block;
+
+  <ion-grid>
+    <ion-row class="fondologin" justify-content-center>
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+        <div> <img style="    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 80%;" src="../../assets/icon/loginImg.png"></div>
-       <div padding>
+        <div padding>
+          <form>
             <ion-item>
-              <ion-input name="id" type="text" [(ngModel)]="user.id" placeholder="Login" ></ion-input>
+              <ion-input name="id" type="text" (keyup)="setid($event)" placeholder="Login"></ion-input>
+
             </ion-item>
+            <div style="color: red;
+            font-size: 14px;
+            margin-left: 20px;" *ngIf="errorId=='id'">Your Login Is Not Valid</div>
             <ion-item>
-              <ion-input name="password" type="password" [(ngModel)]="user.password" placeholder="PassWord" ></ion-input>
+              <ion-input name="password" type="password" (keyup)="setpassword($event)" placeholder="PassWord">
+              </ion-input>
+
             </ion-item>
-          </div>
-          <div style="margin-top: 15%;" padding>
-            <ion-button (click)="login(user)" style="background: url(../../assets/icon/theme.jpg);    color: #000;
-    font-weight: bold;font-family: DejaVuSerifBold;" size="large" type="submit"  expand="block">Login</ion-button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </form>
+            <div style="color: red;
+            font-size: 14px;
+            margin-left: 20px;" *ngIf="errorpassword=='password'">Your password Is Not Valid</div>
+          </form>
+        </div>
+        <div style="margin-top: 5%;" padding>
+          <ion-button (click)="login()" style="background: url(../../assets/icon/theme.jpg);  height: 43px;  color: #000;
+    font-weight: bold;font-family: DejaVuSerifBold; margin-bottom: 17px;" size="large" type="submit" expand="block">
+            Login</ion-button>
+          <ion-button (click)="clickItem()" style="background: url(../../assets/icon/theme.jpg);  height: 43px;  color: #000;
+              font-weight: bold;font-family: DejaVuSerifBold;" size="large" type="submit" expand="block">Guest
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
