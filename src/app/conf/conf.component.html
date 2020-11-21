@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar [color]="'dark'">
+    <ion-title>Profile Configuration</ion-title>
+    <ion-buttons slot="end">
+      <button (click)="goBack()" style="color: white;background-color: black;font-size: 20px;">></button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row class="fondologin" justify-content-center>
+    <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+    
+      <div padding>
+        <form >
+        <ion-item style="padding-top: 13%;padding-bottom: 13%;">
+          <ion-input name="name" type="text" (keyup)="setname($event)" value="{{jsonData.name}}"  placeholder="Name"></ion-input>
+         
+        </ion-item>
+
+        <ion-item style="padding-bottom: 13%;">
+          <ion-input name="grade" type="text"  (keyup)="setgrade($event)" value="{{jsonData.grade}}" placeholder="Grade"></ion-input>
+          
+        </ion-item>
+        <ion-item style="padding-bottom: 13%;">
+          <ion-input name="resultat" value="{{jsonData.resultat}}" type="text" (keyup)="setresultat($event)"  placeholder="Resultat"></ion-input>
+          
+        </ion-item>
+        <ion-item style="padding-bottom: 13%;">
+          <ion-input name="duplication" value="{{jsonData.duplication}}" type="text" (keyup)="setduplication($event)"  placeholder="Duplication"></ion-input>
+          
+        </ion-item>
+        <ion-item > 
+          <ion-input name="NbrParterners" value="{{jsonData.NbrParterners}}" type="text" (keyup)="setNbrParterners($event)"  placeholder="Nbr of Parterners"></ion-input>
+          
+        </ion-item>
+  
+      </form>
+      </div>
+      <div style="margin-top: 10%;" padding>
+        <ion-button (click)="Valider()" style="background: url(../../assets/icon/theme.jpg);    color: #000;
+font-weight: bold;font-family: DejaVuSerifBold;" size="large" type="submit" expand="block">Submit</ion-button>
+      
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+
+
